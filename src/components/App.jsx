@@ -1,16 +1,23 @@
+
+import { Box } from './Box/Box.styled';
+import { Title } from './Title/Title';
+import { ContactForm } from './ContactForm/ContactForm';
+import { Filter } from './Filter/Filter';
+import { ContactsList } from './ContactsList/ContactsList';
+
+const TITLES = {
+  form: 'Phonebook',
+  contacts: 'Contacts',
+};
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <Box>
+      <Title title={TITLES.form} />
+      <ContactForm />
+      <Title title={TITLES.contacts} />
+      <Filter />
+      <ContactsList />
+    </Box>
   );
 };
